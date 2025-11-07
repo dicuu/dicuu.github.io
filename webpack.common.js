@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {VueLoaderPlugin} = require('vue-loader');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: './src/main.js',
@@ -50,6 +51,11 @@ module.exports = {
             template: './src/index.html',
             title: '我的简历',
             filename: "index.html"
+        }),
+        new CopyPlugin({
+            patterns: [
+                { from: 'src/assets/CNAME', to: '' }
+            ],
         }),
     ],
 };
