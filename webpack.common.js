@@ -1,31 +1,23 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { VueLoaderPlugin } = require('vue-loader');
+const {VueLoaderPlugin} = require('vue-loader');
 
 module.exports = {
     entry: './src/main.js',
     output: {
         path: path.resolve(__dirname, 'docs'),
-        filename: 'bundle.[contenthash].js',
+        filename: 'js/[name].[chunkhash:8].js',
         clean: true,
     },
     resolve: {
         extensions: ['.js', '.jsx', '.css', '.png', '.html', '.vue', ''],
         alias: {
-            '@': path.resolve(__dirname, 'src'),
             'vue': 'vue/dist/vue.esm-bundler.js'
         }
     },
-    // resolve: {
-    //     extensions: ['.js', '.vue'],
-    //     alias: {
-    //         // '@': path.resolve(__dirname, 'src'),
-    //         'vue': 'vue/dist/vue.esm-bundler.js'
-    //     },
-    // },
     module: {
         rules: [
-            { test: /\.vue$/, loader: 'vue-loader' },
+            {test: /\.vue$/, loader: 'vue-loader'},
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
@@ -36,8 +28,20 @@ module.exports = {
                     },
                 },
             },
-            { test: /\.css$/, use: ['style-loader', 'css-loader'] },
-            { test: /\.(png|jpe?g|gif|svg|webp)$/i, type: 'asset/resource' },
+            {
+                test: /\.(png|jpe?g|gif|svg|webp)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'img/[name].[hash:8][ext]'
+                }
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'fonts/[name].[hash:8][ext]'
+                }
+            },
         ],
     },
     plugins: [

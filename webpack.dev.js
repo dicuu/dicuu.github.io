@@ -13,4 +13,12 @@ module.exports = merge(common, {
         liveReload: true,
         watchFiles: ['src/**/*'],
     },
+    module: {
+        rules: [
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader'],
+            }
+        ]
+    }
 });

@@ -1,4 +1,5 @@
 import {createRouter, createWebHashHistory} from 'vue-router';
+
 import Home from '../views/Home.vue';
 import About from '../views/About.vue';
 import Projects from '../views/Projects.vue';
@@ -10,6 +11,6 @@ const routes = [
 ];
 
 export default createRouter({
-    history: createWebHashHistory(), // ✅ 支持 GitHub Pages
+    history: createWebHashHistory(),
     routes,
 });
