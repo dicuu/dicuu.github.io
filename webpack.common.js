@@ -5,9 +5,8 @@ const { VueLoaderPlugin } = require('vue-loader');
 module.exports = {
     entry: './src/main.js',
     output: {
-        path: path.resolve(__dirname, 'public'),
+        path: path.resolve(__dirname, 'docs'),
         filename: 'bundle.[contenthash].js',
-        // publicPath: './', // 重要：GitHub Pages 静态路径
         clean: true,
     },
     resolve: {
