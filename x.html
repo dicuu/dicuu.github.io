@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学术简历</title>
+    <!-- 引入Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 引入Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* 仅添加必要的自定义样式 */
+        .navbar {
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .publication-item, .experience-item {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .publication-item:hover, .experience-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-bar {
+            height: 8px;
+            border-radius: 4px;
+            transition: width 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+<!-- 导航栏 -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-transparent">
+    <div class="container-xl">
+        <a class="navbar-brand" href="#">
+            <i class="fas fa-graduation-cap me-2"></i>学术简历
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active px-3 py-2 rounded" href="#home">首页</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3 py-2 rounded" href="#about">个人信息</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3 py-2 rounded" href="#education">教育背景</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3 py-2 rounded" href="#research">研究经历</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3 py-2 rounded" href="#publications">发表论文</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3 py-2 rounded" href="#projects">研究项目</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3 py-2 rounded" href="#awards">获奖情况</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3 py-2 rounded" href="#skills">专业技能</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- 首页/个人信息头部 -->
+<div id="home" class="section pt-25 bg-light">
+    <div class="container-xl">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="display-3 fw-bold">张明 博士</h1>
+                <h3 class="text-primary mb-4">计算机科学与人工智能研究员</h3>
+                <p class="lead mb-5">专注于机器学习、深度学习与自然语言处理领域的研究，在顶级学术期刊和会议上发表论文20余篇。</p>
+
+                <div class="d-flex flex-wrap gap-4 mb-5">
+                    <a href="mailto:zhangming@example.edu" class="d-flex align-items-center text-dark">
+                        <i class="fas fa-envelope me-2"></i> zhangming@example.edu
+                    </a>
+                    <a href="tel:+8612345678901" class="d-flex align-items-center text-dark">
+                        <i class="fas fa-phone me-2"></i> +86 123 4567 8901
+                    </a>
+                    <a href="#" class="d-flex align-items-center text-dark">
+                        <i class="fas fa-map-marker-alt me-2"></i> 北京市海淀区
+                    </a>
+                </div>
+
+                <div class="d-flex gap-3">
+                    <a href="#" class="btn btn-primary"><i class="fab fa-google Scholar me-2"></i>Google Scholar</a>
+                    <a href="#" class="btn btn-secondary"><i class="fab fa-researchgate me-2"></i>ResearchGate</a>
+                    <a href="#" class="btn btn-dark"><i class="fab fa-github me-2"></i>GitHub</a>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center">
+                <img src="https://picsum.photos/id/1005/300/300" alt="张明博士照片" class="rounded-circle img-thumbnail shadow-lg" style="width: 250px; height: 250px; object-fit: cover;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 个人信息 -->
+<div id="about" class="section">
+    <div class="container-xl">
+        <h2 class="display-5 mb-5 pb-2 border-bottom">个人信息</h2>
+
+        <div class="row">
+            <div class="col-md-6 mb-5">
+                <h3 class="text-primary mb-3">研究兴趣</h3>
+                <div class="d-flex flex-wrap gap-2">
+                    <span class="badge bg-secondary px-3 py-1">机器学习</span>
+                    <span class="badge bg-secondary px-3 py-1">深度学习</span>
+                    <span class="badge bg-secondary px-3 py-1">自然语言处理</span>
+                    <span class="badge bg-secondary px-3 py-1">计算机视觉</span>
+                    <span class="badge bg-secondary px-3 py-1">强化学习</span>
+                    <span class="badge bg-secondary px-3 py-1">知识图谱</span>
+                    <span class="badge bg-secondary px-3 py-1">大语言模型</span>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-5">
+                <h3 class="text-primary mb-3">学术任职</h3>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <span>IEEE 会员</span>
+                        <span class="text-muted">2018-至今</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <span>ACM 会员</span>
+                        <span class="text-muted">2017-至今</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <span>NeurIPS、ICML 审稿人</span>
+                        <span class="text-muted">2019-至今</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="text-primary mb-3">语言能力</h3>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between">
+                        <span>英语</span>
+                        <div class="w-50">
+                            <div class="skill-bar bg-primary" style="width: 95%"></div>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between">
+                        <span>中文</span>
+                        <div class="w-50">
+                            <div class="skill-bar bg-primary" style="width: 100%"></div>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between">
+                        <span>日语</span>
+                        <div class="w-50">
+                            <div class="skill-bar bg-primary" style="width: 60%"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-6">
+                <h3 class="text-primary mb-3">教学经历</h3>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <strong>研究生课程：高级机器学习</strong>
+                        <p class="mb-0 text-muted">主讲，2020-2023学年</p>
+                    </li>
+                    <li class="list-group-item">
+                        <strong>本科生课程：人工智能导论</strong>
+                        <p class="mb-0 text-muted">助教，2018-2019学年</p>
+                    </li>
+                    <li class="list-group-item">
+                        <strong>暑期学校：自然语言处理前沿</strong>
+                        <p class="mb-0 text-muted">讲师，2021-2022</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 教育背景 -->
+<div id="education" class="section bg-light">
+    <div class="container-xl">
+        <h2 class="display-5 mb-5 pb-2 border-bottom">教育背景</h2>
+
+        <div class="row">
+            <div class="col-lg-6 mb-4">
+                <div class="card experience-item h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between mb-3">
+                            <h3 class="card-title">博士 计算机科学</h3>
+                            <span class="badge bg-primary">2015-2020</span>
+                        </div>
+                        <h4 class="card-subtitle mb-3 text-muted">清华大学</h4>
+                        <p class="card-text"><strong>导师：</strong>李教授</p>
+                        <p class="card-text"><strong>博士论文：</strong>《基于深度学习的自然语言理解与生成研究》</p>
+                        <p class="card-text"><strong>GPA：</strong>3.9/4.0 (排名：1/32)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 mb-4">
+                <div class="card experience-item h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between mb-3">
+                            <h3 class="card-title">学士 计算机科学与技术</h3>
+                            <span class="badge bg-primary">2011-2015</span>
+                        </div>
+                        <h4 class="card-subtitle mb-3 text-muted">北京大学</h4>
+                        <p class="card-text"><strong>专业方向：</strong>人工智能与信息处理</p>
+                        <p class="card-text"><strong>毕业论文：</strong>《基于支持向量机的文本分类研究》</p>
+                        <p class="card-text"><strong>GPA：</strong>3.85/4.0 (排名：3/120)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 研究经历 -->
+<div id="research" class="section">
+    <div class="container-xl">
+        <h2 class="display-5 mb-5 pb-2 border-bottom">研究经历</h2>
+
+        <div class="row">
+            <div class="col-12 mb-4">
+                <div class="card experience-item">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between mb-3">
+                            <h3 class="card-title">研究员</h3>
+                            <span class="badge bg-primary">2022-至今</span>
+                        </div>
+                        <h4 class="card-subtitle mb-3 text-muted">中国科学院计算技术研究所</h4>
+                        <p class="card-text mb-3">负责自然语言处理与大语言模型方向的研究工作，主导多个国家级科研项目，指导研究生5名。</p>
+                        <p class="card-text"><strong>研究方向：</strong>大语言模型的高效微调、多模态语义理解、低资源语言处理</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 mb-4">
+                <div class="card experience-item">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between mb-3">
+                            <h3 class="card-title">博士后</h3>
+                            <span class="badge bg-primary">2020-2022</span>
+                        </div>
+                        <h4 class="card-subtitle mb-3 text-muted">斯坦福大学 计算机科学系</h4>
+                        <p class="card-text mb-3">在Smith教授指导下从事机器学习与自然语言处理研究，开发了基于注意力机制的文本生成模型。</p>
+                        <p class="card-text"><strong>合作导师：</strong>Dr. John Smith</p>
+                        <p class="card-text"><strong>研究成果：</strong>发表顶级会议论文5篇，申请专利2项</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="card experience-item">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between mb-3">
+                            <h3 class="card-title">研究助理</h3>
+                            <span class="badge bg-primary">2017-2019</span>
+                        </div>
+                        <h4 class="card-subtitle mb-3 text-muted">清华大学 智能技术与系统国家重点实验室</h4>
+                        <p class="card-text">参与国家重点研发计划项目，负责深度学习模型在自然语言理解任务中的应用研究。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 发表论文 -->
+<div id="publications" class="section bg-light">
+    <div class="container-xl">
+        <h2 class="display-5 mb-5 pb-2 border-bottom">发表论文</h2>
+
+        <div class="mb-4">
+            <h3 class="text-primary">期刊论文</h3>
+            <div class="list-group mt-3">
+                <div class="list-group-item publication-item">
+                    <p class="mb-1"><strong>张明</strong>, 李教授, 王教授. (2023). 基于注意力机制的多源信息融合模型研究. <em>中国科学: 信息科学</em>, 53(2), 1-15. <span class="badge bg-secondary">SCI</span></p>
+                </div>
+                <div class="list-group-item publication-item">
+                    <p class="mb-1">Smith J., <strong>Zhang M.</strong>, Johnson L. (2022). Advanced techniques for natural language generation. <em>IEEE Transactions on Pattern Analysis and Machine Intelligence</em>, 44(5), 2345-2360. <span class="badge bg-secondary">SCI</span> <span class="badge bg-success">影响因子: 17.86</span></p>
+                </div>
+                <div class="list-group-item publication-item">
+                    <p class="mb-1"><strong>张明</strong>, 李教授. (2021). 深度学习在文本分类中的最新进展. <em>计算机学报</em>, 44(3), 456-478. <span class="badge bg-secondary">EI</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h3 class="text-primary">会议论文</h3>
+            <div class="list-group mt-3">
+                <div class="list-group-item publication-item">
+                    <p class="mb-1"><strong>Zhang M.</strong>, Smith J. (2023). Efficient fine-tuning of large language models with limited data. <em>Proceedings of the 37th International Conference on Machine Learning (ICML 2023)</em>, Honolulu, Hawaii, USA. <span class="badge bg-primary">CCF A类</span></p>
+                </div>
+                <div class="list-group-item publication-item">
+                    <p class="mb-1"><strong>Zhang M.</strong>, Li J., Smith J. (2022). Multimodal semantic understanding with transformer. <em>Advances in Neural Information Processing Systems 35 (NeurIPS 2022)</em>, Vancouver, Canada. <span class="badge bg-primary">CCF A类</span></p>
+                </div>
+                <div class="list-group-item publication-item">
+                    <p class="mb-1">Wang Y., <strong>Zhang M.</strong>, Li J. (2021). A novel approach for low-resource language processing. <em>Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics (ACL 2021)</em>, Online. <span class="badge bg-primary">CCF A类</span></p>
+                </div>
+                <div class="list-group-item publication-item">
+                    <p class="mb-1"><strong>Zhang M.</strong>, Li J. (2020). Attention-based models for text summarization. <em>Proceedings of the 28th International Joint Conference on Artificial Intelligence (IJCAI 2020)</em>, Yokohama, Japan. <span class="badge bg-primary">CCF A类</span></p>
+                </div>
+            </div>
+            <p class="mt-3 text-muted"><em>注：共计发表学术论文23篇，其中第一作者12篇，SCI收录8篇，EI收录15篇</em></p>
+        </div>
+    </div>
+</div>
+
+<!-- 研究项目 -->
+<div id="projects" class="section">
+    <div class="container-xl">
+        <h2 class="display-5 mb-5 pb-2 border-bottom">研究项目</h2>
+
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 publication-item">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between mb-2">
+                            <h3 class="card-title">基于大语言模型的智能对话系统研究</h3>
+                            <span class="badge bg-primary">2023-2025</span>
+                        </div>
+                        <p class="card-text mb-2"><strong>项目来源：</strong>国家自然科学基金面上项目</p>
+                        <p class="card-text mb-2"><strong>角色：</strong>项目负责人</p>
+                        <p class="card-text mb-2"><strong>经费：</strong>68万元</p>
+                        <p class="card-text">研究大语言模型在复杂对话场景中的应用，解决上下文理解、知识更新和安全可控等关键问题。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 publication-item">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between mb-2">
+                            <h3 class="card-title">多模态语义理解与生成技术</h3>
+                            <span class="badge bg-primary">2022-2024</span>
+                        </div>
+                        <p class="card-text mb-2"><strong>项目来源：</strong>科技部重点研发计划</p>
+                        <p class="card-text mb-2"><strong>角色：</strong>子课题负责人</p>
+                        <p class="card-text mb-2"><strong>经费：</strong>120万元</p>
+                        <p class="card-text">研究文本、图像、音频等多模态信息的统一表示与跨模态生成技术，构建多模态智能处理平台。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 publication-item">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between mb-2">
+                            <h3 class="card-title">低资源语言处理关键技术研究</h3>
+                            <span class="badge bg-primary">2021-2023</span>
+                        </div>
+                        <p class="card-text mb-2"><strong>项目来源：</strong>中国科学院前沿科学重点研究项目</p>
+                        <p class="card-text mb-2"><strong>角色：</strong>核心研究人员</p>
+                        <p class="card-text mb-2"><strong>经费：</strong>80万元</p>
+                        <p class="card-text">针对资源稀缺语言，研究迁移学习和数据增强技术，开发适用于低资源场景的自然语言处理模型。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 publication-item">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between mb-2">
+                            <h3 class="card-title">基于深度学习的文本生成模型研究</h3>
+                            <span class="badge bg-primary">2019-2021</span>
+                        </div>
+                        <p class="card-text mb-2"><strong>项目来源：</strong>博士后科学基金特别资助</p>
+                        <p class="card-text mb-2"><strong>角色：</strong>项目负责人</p>
+                        <p class="card-text mb-2"><strong>经费：</strong>15万元</p>
+                        <p class="card-text">研究基于注意力机制的文本生成模型，解决生成文本的连贯性和相关性问题，应用于机器翻译和文本摘要。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 获奖情况 -->
+<div id="awards" class="section bg-light">
+    <div class="container-xl">
+        <h2 class="display-5 mb-5 pb-2 border-bottom">获奖情况</h2>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 text-center publication-item">
+                    <div class="card-body">
+                        <div class="text-primary mb-3">
+                            <i class="fas fa-trophy fa-3x"></i>
+                        </div>
+                        <h3 class="card-title">国家优秀青年科学基金</h3>
+                        <p class="card-text text-muted">2023年</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 text-center publication-item">
+                    <div class="card-body">
+                        <div class="text-primary mb-3">
+                            <i class="fas fa-award fa-3x"></i>
+                        </div>
+                        <h3 class="card-title">ACM杰出论文奖</h3>
+                        <p class="card-text text-muted">2022年</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 text-center publication-item">
+                    <div class="card-body">
+                        <div class="text-primary mb-3">
+                            <i class="fas fa-medal fa-3x"></i>
+                        </div>
+                        <h3 class="card-title">清华大学优秀博士论文</h3>
+                        <p class="card-text text-muted">2020年</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 text-center publication-item">
+                    <div class="card-body">
+                        <div class="text-primary mb-3">
+                            <i class="fas fa-certificate fa-3x"></i>
+                        </div>
+                        <h3 class="card-title">教育部博士研究生学术新人奖</h3>
+                        <p class="card-text text-muted">2018年</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 text-center publication-item">
+                    <div class="card-body">
+                        <div class="text-primary mb-3">
+                            <i class="fas fa-university fa-3x"></i>
+                        </div>
+                        <h3 class="card-title">北京大学优秀毕业生</h3>
+                        <p class="card-text text-muted">2015年</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 text-center publication-item">
+                    <div class="card-body">
+                        <div class="text-primary mb-3">
+                            <i class="fas fa-globe-asia fa-3x"></i>
+                        </div>
+                        <h3 class="card-title">国际机器学习竞赛二等奖</h3>
+                        <p class="card-text text-muted">2017年</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 专业技能 -->
+<div id="skills" class="section">
+    <div class="container-xl">
+        <h2 class="display-5 mb-5 pb-2 border-bottom">专业技能</h2>
+
+        <div class="row">
+            <div class="col-md-6 mb-5">
+                <h3 class="text-primary mb-4">编程语言</h3>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between mb-1">
+                        <span>Python</span>
+                        <span>95%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" style="width: 95%"></div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between mb-1">
+                        <span>C/C++</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" style="width: 85%"></div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between mb-1">
+                        <span>Java</span>
+                        <span>75%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" style="width: 75%"></div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between mb-1">
+                        <span>MATLAB</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" style="width: 80%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-5">
+                <h3 class="text-primary mb-4">机器学习框架</h3>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between mb-1">
+                        <span>TensorFlow/PyTorch</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between mb-1">
+                        <span>Scikit-learn</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" style="width: 85%"></div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between mb-1">
+                        <span>Keras</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" style="width: 80%"></div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between mb-1">
+                        <span>MXNet</span>
+                        <span>70%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" style="width: 70%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="text-primary mb-4">研究工具与技术</h3>
+                <div class="d-flex flex-wrap gap-2">
+                    <span class="badge bg-secondary px-3 py-1">LaTeX</span>
+                    <span class="badge bg-secondary px-3 py-1">Git</span>
+                    <span class="badge bg-secondary px-3 py-1">Docker</span>
+                    <span class="badge bg-secondary px-3 py-1">Linux</span>
+                    <span class="badge bg-secondary px-3 py-1">Jupyter</span>
+                    <span class="badge bg-secondary px-3 py-1">OpenCV</span>
+                    <span class="badge bg-secondary px-3 py-1">NLTK</span>
+                    <span class="badge bg-secondary px-3 py-1">SpaCy</span>
+                    <span class="badge bg-secondary px-3 py-1">Hadoop</span>
+                    <span class="badge bg-secondary px-3 py-1">Spark</span>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <h3 class="text-primary mb-4">研究领域专长</h3>
+                <div class="d-flex flex-wrap gap-2">
+                    <span class="badge bg-primary px-3 py-1">自然语言处理</span>
+                    <span class="badge bg-primary px-3 py-1">深度学习</span>
+                    <span class="badge bg-primary px-3 py-1">神经网络</span>
+                    <span class="badge bg-primary px-3 py-1">计算机视觉</span>
+                    <span class="badge bg-primary px-3 py-1">强化学习</span>
+                    <span class="badge bg-primary px-3 py-1">知识图谱</span>
+                    <span class="badge bg-primary px-3 py-1">多模态学习</span>
+                    <span class="badge bg-primary px-3 py-1">大语言模型</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 页脚 -->
+<footer class="bg-dark text-white py-5">
+    <div class="container-xl">
+        <div class="text-center">
+            <p class="mb-2">© 2023 张明 学术简历. 保留所有权利.</p>
+            <div class="d-flex justify-content-center gap-4">
+                <a href="#" class="text-white"><i class="fab fa-google"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-researchgate"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-github"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- 引入Bootstrap JS和Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // 导航栏滚动效果
+    const navbar = document.querySelector('.navbar');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('.section');
+
+    window.addEventListener('scroll', function() {
+        // 导航栏背景变化
+        if (window.scrollY > 100) {
+            navbar.classList.remove('bg-transparent');
+            navbar.classList.add('bg-white', 'shadow');
+        } else {
+            navbar.classList.add('bg-transparent');
+            navbar.classList.remove('bg-white', 'shadow');
+        }
+
+        // 导航项激活状态
+        let current = '';
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+
+            if (window.scrollY >= sectionTop - 200) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active', 'bg-primary', 'text-white');
+            link.classList.add('text-dark');
+
+            if (link.getAttribute('href').substring(1) === current) {
+                link.classList.add('active', 'bg-primary', 'text-white');
+            }
+        });
+    });
+
+    // 平滑滚动
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+
+            // 移动端点击后关闭菜单
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            if (navbarCollapse.classList.contains('show')) {
+                navbarCollapse.classList.remove('show');
+            }
+        });
+    });
+
+    // 页面加载时触发一次滚动事件，确保导航状态正确
+    window.dispatchEvent(new Event('scroll'));
+</script>
+</body>
+</html>
