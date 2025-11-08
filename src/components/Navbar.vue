@@ -1,26 +1,20 @@
 <script>
 import {useRoute} from 'vue-router'
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'
+
 
 export default {
     name: 'Navbar',
+    props: {
+        menuItems: {
+            type: Array,
+            default: () => []
+        }
+    },
     setup() {
         const route = useRoute()
-
-        // 定义导航菜单项
-        const menuItems = [
-            {path: '/', text: 'Home'},
-            {path: '/about', text: 'About'},
-            {path: '/projects', text: 'Projects'},
-            {path: '/research', text: 'Research'},
-            {path: '/papers', text: 'Papers'},
-            {path: '/awards', text: 'Awards'},
-            {path: '/skills', text: 'Skills'},
-            {path: '/L', text: 'L'}
-        ]
-
         return {
-            route,
-            menuItems
+            route
         }
     }
 }
@@ -29,6 +23,12 @@ export default {
 <template>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
+            <!-- 添加导航切换按钮 -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
+                    aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
             <!-- 导航菜单居中 -->
             <div class="collapse navbar-collapse justify-content-center" id="nav">
                 <ul class="navbar-nav">
@@ -36,8 +36,7 @@ export default {
                         <router-link
                             class="nav-link"
                             :class="{ 'bg-primary text-white rounded-3': route.path === item.path }"
-                            :to="item.path"
-                        >
+                            :to="item.path">
                             {{ item.text }}
                         </router-link>
                     </li>

@@ -1,10 +1,32 @@
-<script setup>
+<script>
 import Navbar from './components/Navbar.vue';
+
+export default {
+    name: "App",
+    components: {
+        Navbar
+    },
+    data() {
+        return {
+            customMenuItems: [
+                {path: '/', text: 'Home'},
+                {path: '/about', text: 'About'},
+                {path: '/projects', text: 'Projects'},
+                {path: '/research', text: 'Research'},
+                {path: '/papers', text: 'Papers'},
+                {path: '/awards', text: 'Awards'},
+                {path: '/skills', text: 'Skills'}
+            ]
+        }
+    }
+}
 </script>
 
 <template>
     <div id="app">
-        <Navbar/>
+        <Navbar
+            :menuItems="customMenuItems"
+        />
         <div class="container mt-4">
             <router-view/>
         </div>
@@ -12,11 +34,5 @@ import Navbar from './components/Navbar.vue';
 </template>
 
 <style scoped>
-body {
-    font-family: Menlo, Monaco, Consolas, "Courier New", sans-serif;
-    line-height: 1.52;
-    font-size: 14px;
-    padding-top: 20px;
-    background-color: #f7f8f9;
-}
+
 </style>

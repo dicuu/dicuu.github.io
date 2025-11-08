@@ -11,14 +11,18 @@ module.exports = {
         clean: true,
     },
     resolve: {
-        extensions: ['.js', '.jsx', '.css', '.png', '.html', '.vue', ''],
+        extensions: ['.vue', '.js', '.css', '.png', '.html', ''],
         alias: {
+            '@': path.resolve(__dirname, 'src'),
             'vue': 'vue/dist/vue.esm-bundler.js'
         }
     },
     module: {
         rules: [
-            {test: /\.vue$/, loader: 'vue-loader'},
+            {
+                test: /\.vue$/,
+                loader: 'vue-loader'
+            },
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
@@ -37,10 +41,10 @@ module.exports = {
                 }
             },
             {
-                test: /\.(woff|woff2|eot|ttf|otf)$/i,
+                test: /\.(woff2?|ttf|eot|otf)$/,
                 type: 'asset/resource',
                 generator: {
-                    filename: 'fonts/[name].[hash:8][ext]'
+                    filename: 'fonts/[name][ext]'
                 }
             },
         ],
@@ -49,12 +53,12 @@ module.exports = {
         new VueLoaderPlugin(),
         new HtmlWebpackPlugin({
             template: './src/index.html',
-            title: '我的简历',
+            title: 'Yatao Li\'s Homepage',
             filename: "index.html"
         }),
         new CopyPlugin({
             patterns: [
-                { from: 'src/assets/CNAME', to: '' }
+                {from: 'src/assets/CNAME', to: ''}
             ],
         }),
     ],
