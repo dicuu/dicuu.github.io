@@ -1,0 +1,43 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+/* JetBrains Mono */
+/* 常规体 400 */
+@import "~@fontsource/jetbrains-mono/index.css";
+/* 粗体 700 */
+@import "~@fontsource/jetbrains-mono/700.css";
+/* 斜体 400 */
+@import "~@fontsource/jetbrains-mono/400-italic.css";
+/* 粗斜体 700 */
+@import "~@fontsource/jetbrains-mono/700-italic.css";
+
+
+body {
+    font-family: 'JetBrains Mono', 'Monaco', 'Courier New', monospace;
+    background-color: #f9f9f9;
+}
+
+:root {
+    --bs-font-sans-serif: 'JetBrains Mono', monospace;
+}
+
+/* 不同字重和样式 */
+.jetbrains-regular {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 400;
+}
+
+.jetbrains-bold {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+}
+
+.jetbrains-regular-italic {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.jetbrains-bold-italic {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    font-style: italic;
+}

@@ -1,3 +1,10 @@
+<script>
+export default {
+    name: "Home"
+}
+</script>
+
+
 <template>
     <div class="row g-4 align-items-center">
         <div class="col-md-4 text-center">

@@ -1,3 +1,9 @@
+<script>
+export default {
+    name: 'About'
+}
+</script>
+
 <template>
     <div class="card shadow-sm">
         <div class="card-body">

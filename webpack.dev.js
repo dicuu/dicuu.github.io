@@ -8,7 +8,7 @@ module.exports = merge(common, {
         static: './docs',
         port: 3000,
         hot: true,
-        open: true,
+        open: false,
         historyApiFallback: true,
         liveReload: true,
         watchFiles: ['src/**/*'],

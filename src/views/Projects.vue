@@ -1,3 +1,9 @@
+<script>
+export default {
+    name: 'Projects'
+}
+</script>
+
 <template>
     <div class="row g-3">
         <div class="col-md-6">
