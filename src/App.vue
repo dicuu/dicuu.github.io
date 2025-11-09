@@ -23,10 +23,8 @@ export default {
 </script>
 
 <template>
-    <div id="app">
-        <Navbar
-            :menuItems="customMenuItems"
-        />
+    <div class="mx-2">
+        <Navbar :menuItems="customMenuItems"/>
         <div class="container mt-4">
             <router-view/>
         </div>

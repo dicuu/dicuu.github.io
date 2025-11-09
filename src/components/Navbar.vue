@@ -1,7 +1,6 @@
 <script>
-import {useRoute} from 'vue-router'
+import {useRouter, useRoute} from 'vue-router'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
-
 
 export default {
     name: 'Navbar',
@@ -11,44 +10,75 @@ export default {
             default: () => []
         }
     },
-    setup() {
-        const route = useRoute()
+    data() {
         return {
-            route
+            router: null
         }
-    }
+    },
+    computed: {
+        route() {
+            return useRoute()
+        }
+    },
+    mounted() {
+        // 获取router实例
+        this.router = useRouter()
+
+        // 动态设置占位元素高度
+        const navbar = document.querySelector('.navbar')
+        if (navbar) {
+            const navbarHeight = navbar.offsetHeight
+            const placeholder = document.querySelector('.navbar-placeholder')
+            if (placeholder) {
+                placeholder.style.height = navbarHeight + 'px'
+            }
+        }
+    },
+    methods: {
+        handleMenuClick(path) {
+            if (this.router) {
+                this.router.push(path)
+            }
+        }
+    },
 }
 </script>
 
 <template>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <!-- 添加导航切换按钮 -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
-                    aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top py-1">
+        <div class="container-fluid">
+            <!-- 左侧标题 -->
+            <a class="navbar-brand fw-semibold ms-2" href="#">Yatao Li</a>
+
+            <!-- 移动端按钮 -->
+            <button class="navbar-toggler mb-1"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#nav"
+                    aria-controls="nav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon m-0"></span>
             </button>
 
-            <!-- 导航菜单居中 -->
-            <div class="collapse navbar-collapse justify-content-center" id="nav">
-                <ul class="navbar-nav">
-                    <li v-for="(item, index) in menuItems" :key="index" class="nav-item mx-3">
-                        <router-link
-                            class="nav-link"
-                            :class="{ 'bg-primary text-white rounded-3': route.path === item.path }"
-                            :to="item.path">
+            <!-- 菜单内容 -->
+            <div class="collapse navbar-collapse justify-content-end p-2" id="nav">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li v-for="(item, index) in menuItems"
+                        :key="index"
+                        class="nav-item mx-1">
+                        <a class="nav-link px-3"
+                           :class="{ 'fw-bold text-white': route.path === item.path }"
+                           href="javascript:void(0)"
+                           @click="handleMenuClick(item.path)"
+                           data-bs-toggle="collapse"
+                           data-bs-target=".navbar-collapse.show">
                             {{ item.text }}
-                        </router-link>
+                        </a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <!-- 添加分割线 -->
-    <hr class="m-0" style="width: 100%; border-color: #dee2e6; opacity: 0.75;"/>
+    <!-- 添加占位元素 -->
+    <div class="navbar-placeholder" style="height: 60px;"></div>
 </template>
-
-
-<style scoped>
-
-</style>
