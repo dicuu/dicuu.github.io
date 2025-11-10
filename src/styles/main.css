@@ -10,9 +10,10 @@
 @import "~@fontsource/jetbrains-mono/700-italic.css";
 
 
-body {
+html, body {
     font-family: 'JetBrains Mono', 'Monaco', 'Courier New', monospace;
     background-color: #f9f9f9;
+    scroll-behavior: smooth;
 }
 
 :root {
