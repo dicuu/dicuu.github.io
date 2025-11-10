@@ -1,14 +1,22 @@
 import {createRouter, createWebHashHistory} from 'vue-router';
 
 import Home from '../views/Home.vue';
-import About from '../views/About.vue';
-import Projects from '../views/Projects.vue';
+import Education from '../views/Education.vue';
+import Publications from '../views/Publications.vue';
+import Employment from '../views/Employment.vue';
+import Skills from '../views/Skills.vue';
+// import About from '../views/About.vue';
+// import Projects from '../views/Projects.vue';
 import NotFound from '../views/404NotFound.vue';
 
 const routes = [
     {path: '/', name: 'Home', component: Home, meta: {menu: true, title: 'Home',}},
-    {path: '/about', name: 'About', component: About, meta: {menu: true, title: 'About'}},
-    {path: '/projects', name: 'Projects', component: Projects, meta: {menu: true, title: 'Projects'}},
+    {path: '/education', name: 'Education', component: Education, meta: {menu: true, title: 'Education'}},
+    {path: '/publications', name: 'Publications', component: Publications, meta: {menu: true, title: 'Publications'}},
+    {path: '/employment', name: 'Employment', component: Employment, meta: {menu: true, title: 'Employment'}},
+    {path: '/skills', name: 'Skills', component: Skills, meta: {menu: true, title: 'Skills'}},
+    // {path: '/about', name: 'About', component: About, meta: {menu: true, title: 'About'}},
+    // {path: '/projects', name: 'Projects', component: Projects, meta: {menu: true, title: 'Projects'}},
     {path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound, meta: {menu: false, title: 'Page Not Found'}},
 ];
 

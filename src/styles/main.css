@@ -11,13 +11,13 @@
 
 
 html, body {
-    font-family: 'JetBrains Mono', 'Monaco', 'Courier New', monospace;
+    font-family: 'JetBrains Mono', monospace;
     background-color: #f9f9f9;
     scroll-behavior: smooth;
 }
 
 :root {
-    --bs-font-sans-serif: 'JetBrains Mono', monospace;
+    --main-color: #E7C05E;
 }
 
 /* 不同字重和样式 */
